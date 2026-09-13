@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para a minha zézinha 💜</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-600 to-purple-700 text-white min-h-screen flex flex-col">
+  <video autoplay muted loop id="video-bg">
+    <source src="VIDEO 1.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <header class="text-center py-6">
+    <h1 class="text-4xl font-bold">Para a minha zézinha 💜</h1>
+    <p class="text-lg text-white-200 mt-2">Cada momento ao seu lado é inesquecível</p>
+  </header>
+
+  <main class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    <div class="card-foto">
+      <img src="fotos/FOTO 1.jpeg" alt="FOTO 1.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 2.jpeg" alt="FOTO 2.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 10.jpeg" alt="FOTO 10.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 4.jpeg" alt="FOTO 4.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 5.jpeg" alt="FOTO 5.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 6.jpeg" alt="FOTO 6.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 9.jpeg" alt="FOTO 9.jpeg" class="w-full h-64 object-cover" />
+    </div>
+    <div class="card-foto">
+      <img src="fotos/FOTO 8.jpeg" alt="FOTO 8.jpeg" class="w-full h-64 object-cover" />
+    </div>
+  </main>
+
+  <div class="flex flex-col items-center mt-10">
+    <button id="surpriseBtn" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">
+      Clique para sua surpresa 💜
+    </button>
+
+    <div class="mt-6 animate-bounce text-5xl">💜</div>
+    <p class="text-white mt-2 italic">Você me faz feliz de um jeito que ninguém mais faz.</p>
+
+    <div id="message" class="mt-8 hidden text-center text-xl max-w-md bg-white text-purple-800 p-6 rounded-xl shadow-lg">
+      Zezinha,
+      <p></p>
+
+Às vezes eu fico pensando em tudo que está acontecendo entre nós e, sinceramente, talvez eu nem saiba colocar em palavras o que sinto. A gente mudou, a nossa forma de estar um com o outro mudou, mas existe uma coisa que não mudou em mim: o amor que eu sinto por você.
+<p></p>
+
+Eu sei que você quer sua liberdade. Sei que existe uma parte sua que precisa viver, experimentar, descobrir quem você é sem sentir que precisa estar presa a nada. E, por mais que meu coração às vezes queira você só pra mim, eu quero que você seja livre. Até porque amar também é sobre isso, amar o outro para que ele seja o próprio e, intencionalmente escolha estar ali, escolha suas definições e escolha suas mudanças para dar certo. Amar você também é querer que você seja feliz, mesmo quando isso exige de mim um pouco de paciência e coragem.
+<p></p>
+
+E talvez seja justamente por isso que eu continuo aqui.
+<p></p>
+
+Não quero que você fique comigo por medo de me perder, por culpa ou porque eu insisti o suficiente. Eu quero que, se um dia você escolher ficar, seja porque o seu coração também escolheu. Até lá, eu só quero que você saiba que o meu coração continua encontrando você. Enquanto existir esse sentimento entre nós, eu quero cuidar dele.
+<p></p>
+Meu amor por você é intencional. É uma escolha que faço todos os dias. Não é só a saudade, o carinho, a vontade de te beijar ou de ter você perto. É escolher estar presente. É lembrar de você nas pequenas coisas. É querer saber como foi seu dia. É querer te acolher quando você precisar. É respeitar seu espaço quando você precisar dele. É continuar enxergando nós dois mesmo quando tudo parece meio incerto.
+<p></p>
+
+Eu não quero te prometer que tudo vai ser perfeito. Quero te prometer algo mais verdadeiro: enquanto eu estiver nessa vida, você vai saber que é amada.
+<p></p>
+Porque, Zezinha, eu não quero amar você apenas quando for fácil. Eu quero amar você com calma, com respeito, com verdade e com intenção. Então eu vou continuar aqui. Sem te prender. Sem te pressionar. Sem exigir que você tenha respostas agora.
+<P></P>
+Só estando.
+<p></p>
+Porque eu te amo. E porque, apesar de toda a confusão, de todos os caminhos que a gente ainda pode tomar, você continua sendo alguém por quem meu coração escolhe ficar. 
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("surpriseBtn");
+    const msg = document.getElementById("message");
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "0";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function startHearts() {
+      setInterval(createHeart, 400);
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.remove("hidden");
+      startHearts();
+    });
+  </script>
+</body>
+</html>
